@@ -1,6 +1,6 @@
 ﻿using System;
 using Tyuiu.VasilevNV.Sprint5.Task3.V28.Lib;
-int x = 2;
+int x = 3;
 DataService ds = new DataService();
 Console.WriteLine("*Спринт #5 | Выполнил: Васильев Н. В. | ИСПБ-24-1                       *");
 Console.WriteLine("*************************************************************************");
