@@ -10,7 +10,7 @@ namespace Tyuiu.VasilevNV.Sprint5.Task3.V28.Lib
         {
            string path =$@"{Directory.GetCurrentDirectory()}\OutPutFileTask3.bin";
             double res = -0.25 * (Math.Pow(x, 3) - 3 * Math.Pow(x, 2) + 4);
-            res = Math.Round(res,2);
+            res = Math.Round(res,3);
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
                writer.Write(BitConverter.GetBytes(res));
