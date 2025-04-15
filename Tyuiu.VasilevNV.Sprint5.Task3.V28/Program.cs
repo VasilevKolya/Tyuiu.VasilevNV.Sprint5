@@ -1,0 +1,27 @@
+﻿using System;
+using Tyuiu.VasilevNV.Sprint5.Task3.V28.Lib;
+int x = 2;
+DataService ds = new DataService();
+Console.WriteLine("*Спринт #5 | Выполнил: Васильев Н. В. | ИСПБ-24-1                       *");
+Console.WriteLine("*************************************************************************");
+Console.WriteLine("* Спринт #5                                                             *");
+Console.WriteLine("* Тема:Потоковый метод записи данных в бинарный файл                    *");
+Console.WriteLine("* Задание #3                                                            *");
+Console.WriteLine("* Вариант #28                                                            *");
+Console.WriteLine("* Выполнил: Васильев Н. В. | ИСПБ-24-1                                  *");
+Console.WriteLine("*************************************************************************");
+Console.WriteLine("*УСЛОВИЕ:                                                               *");
+Console.WriteLine("*Дано выражение вычислить его значение при x = 3, результат сохранить    ");
+Console.WriteLine("в бинарный файл OutPutFileTask3.bin и вывести на консоль. Округлить до трёх знаков после запятой. *");
+Console.WriteLine("*************************************************************************");
+Console.WriteLine(" ИСХОДНЫЕ ДАННЫЕ:                                                       *");
+Console.WriteLine("*************************************************************************");
+Console.WriteLine("X = " + x);
+Console.WriteLine("*************************************************************************");
+Console.WriteLine(" РЕЗУЛЬТАТ:                                                             *");
+Console.WriteLine("*************************************************************************");
+string res = ds.SaveToFileTextData(x);
+Console.WriteLine("Файл: " + res);
+Console.WriteLine("Создан!");
+Console.ReadKey();
+
