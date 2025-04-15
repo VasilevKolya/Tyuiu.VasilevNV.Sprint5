@@ -19,7 +19,7 @@ Console.WriteLine(" ИСХОДНЫЕ ДАННЫЕ:                              
 Console.WriteLine("*************************************************************************");
 Console.WriteLine("startValue = " + startValue);
 Console.WriteLine("stopValue = " + stopValue);
-Console.WriteLine("*************************************************************************");
+Console.WriteLine("*************************************************************************"); 
 Console.WriteLine(" РЕЗУЛЬТАТ:                                                             *");
 Console.WriteLine("*************************************************************************");
 

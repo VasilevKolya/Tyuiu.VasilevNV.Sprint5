@@ -9,7 +9,7 @@ namespace Tyuiu.VasilevNV.Sprint5.Task1.V15.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\\Users\\nvasi\\source\\repos\\Tyuiu.VasilevNV.Sprint5\\Tyuiu.VasilevNV.Sprint5.Task1.V15.Lib\\bin\\Debug";
+            string path = @"C:\Users\nvasi\source\repos\Tyuiu.VasilevNV.Sprint5\Tyuiu.VasilevNV.Sprint5.Task1.V15\bin\Debug";
             FileInfo fileinfo = new FileInfo(path);
             bool fileExits = fileinfo.Exists;
             bool wait = true;
