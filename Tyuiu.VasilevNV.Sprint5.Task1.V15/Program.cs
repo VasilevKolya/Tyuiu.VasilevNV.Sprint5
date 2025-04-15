@@ -2,7 +2,7 @@
 using Tyuiu.VasilevNV.Sprint5.Task1.V15.Lib;
 DataService ds = new DataService();
 int startValue = -5;
-int stopValue = 5; 
+int stopValue = 5;
 Console.WriteLine("*Спринт #5 | Выполнил: Васильев Н. В. | ИСПБ-24-1                       *");
 Console.WriteLine("*************************************************************************");
 Console.WriteLine("* Спринт #5                                                             *");

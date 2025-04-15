@@ -4,7 +4,7 @@ namespace Tyuiu.VasilevNV.Sprint5.Task1.V15.Lib
 {
     public class DataService : ISprint5Task1V15
     {
-        public List<string> TabulateFunction(int start, int end, int step)
+       public List<string> TabulateFunction(int start, int end, int step)
         {
             var results = new List<string>();
             results.Add("x\t\tF(x)");
@@ -15,9 +15,9 @@ namespace Tyuiu.VasilevNV.Sprint5.Task1.V15.Lib
                 try
                 {
                     double denominator = x - 0.4;
-                    double value = (Math.Abs(denominator) < 0.0001) ? 0 :
+                    double value = (Math.Abs(denominator) < 0.0001) ? 0 : 
                                  Math.Cos(x) / denominator + Math.Sin(x) * 8 * x + 2;
-
+                    
                     results.Add($"{x}\t\t{Math.Round(value, 2)}");
                 }
                 catch
