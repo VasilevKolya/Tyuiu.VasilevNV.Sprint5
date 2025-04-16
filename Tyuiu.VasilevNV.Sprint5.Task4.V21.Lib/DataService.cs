@@ -5,26 +5,19 @@ namespace Tyuiu.VasilevNV.Sprint5.Task4.V21.Lib
 {
     public class DataService : ISprint5Task4V21
     {
-            public double LoadFromDataFile(string path)
-            {
-               
-                string strX = File.ReadAllText(path).Trim();
+        public double LoadFromDataFile(string path)
+        {
+            string strX = File.ReadAllText(path).Trim();
 
-               
-                NumberFormatInfo numberFormat = new NumberFormatInfo()
-                {
-                    NumberDecimalSeparator = ".",
-                    NumberGroupSeparator = ""
-                };
+            NumberFormatInfo provider = new NumberFormatInfo();
+            provider.NumberDecimalSeparator = ".";
+            provider.NumberGroupSeparator = "";
 
-               
-                double x = double.Parse(strX, numberFormat);
+            double x = double.Parse(strX, provider);
 
-               
-                double result = Math.Pow(x, 2) + 3 * x + 5;
+            double result = Math.Round(Math.Sin(x) + (x / 2), 3);
 
-               
-                return Math.Round(result, 3);
-            }
+            return result;
         }
     }
+}
