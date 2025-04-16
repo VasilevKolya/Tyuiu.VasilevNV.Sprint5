@@ -1,0 +1,25 @@
+﻿using Tyuiu.VasilevNV.Sprint5.Task4.V21.Lib;
+DataService ds = new DataService();
+Console.WriteLine("*Спринт #5 | Выполнил: Васильев Н. В. | ИСПБ-24-1                       *");
+Console.WriteLine("*************************************************************************");
+Console.WriteLine("* Спринт #5                                                             *");
+Console.WriteLine("* Тема:Чтение данных из текстового файла                                *");
+Console.WriteLine("* Задание #4                                                            *");
+Console.WriteLine("* Вариант #21                                                            *");
+Console.WriteLine("* Выполнил: Васильев Н. В. | ИСПБ-24-1                                  *");
+Console.WriteLine("*************************************************************************");
+Console.WriteLine("*УСЛОВИЕ:                                                               *");
+Console.WriteLine("*Вычислить значение по формуле (Полученное значение округлить            ");
+Console.WriteLine("до трёх знаков после запятой) и вернуть полученный результат на консоль. *");
+string path = $@"{Directory.GetCurrentDirectory()}\InPutDataFileTask4.txt";
+Console.WriteLine("*************************************************************************");
+Console.WriteLine(" ИСХОДНЫЕ ДАННЫЕ:                                                       *");
+Console.WriteLine("*************************************************************************");
+Console.WriteLine("Данные находяться в файле:" + path);
+Console.WriteLine("*************************************************************************");
+Console.WriteLine(" РЕЗУЛЬТАТ:                                                             *");
+Console.WriteLine("*************************************************************************");
+double res = ds.LoadFromDataFile(path);
+Console.WriteLine(res);
+Console.ReadKey();
+
