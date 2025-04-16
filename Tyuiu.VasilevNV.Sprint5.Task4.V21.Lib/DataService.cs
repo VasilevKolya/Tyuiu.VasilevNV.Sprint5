@@ -17,10 +17,8 @@ namespace Tyuiu.VasilevNV.Sprint5.Task4.V21.Lib
 
             double x = double.Parse(strX, provider);
 
-           
-            double result = Math.Round(Math.Cos(x) + (x * x) / 2, 3);
 
-            return result;
+            return Math.Round(Math.Pow(x, 3) + 2 * x / Math.Cos(x), 3);
         }
     }
 }
