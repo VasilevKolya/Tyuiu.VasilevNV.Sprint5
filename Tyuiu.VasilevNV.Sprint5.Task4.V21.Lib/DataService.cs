@@ -9,13 +9,16 @@ namespace Tyuiu.VasilevNV.Sprint5.Task4.V21.Lib
         {
             string strX = File.ReadAllText(path).Trim();
 
-            NumberFormatInfo provider = new NumberFormatInfo();
-            provider.NumberDecimalSeparator = ".";
-            provider.NumberGroupSeparator = "";
+            NumberFormatInfo provider = new NumberFormatInfo
+            {
+                NumberDecimalSeparator = ".",
+                NumberGroupSeparator = ""
+            };
 
             double x = double.Parse(strX, provider);
 
-            double result = Math.Round(Math.Sin(x) + (x / 2), 3);
+           
+            double result = Math.Round(Math.Cos(x) + (x * x) / 2, 3);
 
             return result;
         }
