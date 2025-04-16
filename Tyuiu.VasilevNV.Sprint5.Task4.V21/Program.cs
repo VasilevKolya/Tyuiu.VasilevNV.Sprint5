@@ -11,7 +11,7 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("*УСЛОВИЕ:                                                               *");
 Console.WriteLine("*Вычислить значение по формуле (Полученное значение округлить            ");
 Console.WriteLine("до трёх знаков после запятой) и вернуть полученный результат на консоль. *");
-string path = $@"{Directory.GetCurrentDirectory()}\InPutDataFileTask4.txt";
+string path = $@"{Directory.GetCurrentDirectory()}\InPutDataFileTask4V21.txt";
 Console.WriteLine("*************************************************************************");
 Console.WriteLine(" ИСХОДНЫЕ ДАННЫЕ:                                                       *");
 Console.WriteLine("*************************************************************************");
