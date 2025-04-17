@@ -8,23 +8,18 @@ namespace Tyuiu.VasilevNV.Sprint5.Task5.V1.Lib
         public double LoadFromDataFile(string path)
         {
             string[] lines = File.ReadAllLines(path);
-
             double sum = 0;
-            NumberFormatInfo provider = new NumberFormatInfo();
-            provider.NumberDecimalSeparator = ".";
-            provider.NumberGroupSeparator = "";
 
             foreach (string line in lines)
             {
-               
                 if (string.IsNullOrWhiteSpace(line)) continue;
 
-               
-                string cleanLine = line.Trim().Replace(",", ".");
 
-                if (double.TryParse(cleanLine, NumberStyles.Any, provider, out double number))
+                string normalizedLine = line.Replace(",", ".").Trim();
+
+                if (double.TryParse(normalizedLine, NumberStyles.Any, CultureInfo.InvariantCulture, out double number))
                 {
-                    if (number % 2 == 0)
+                    if (IsEven(number))
                     {
                         sum += number;
                     }
@@ -32,6 +27,11 @@ namespace Tyuiu.VasilevNV.Sprint5.Task5.V1.Lib
             }
 
             return Math.Round(sum, 3);
+        }
+
+        private bool IsEven(double number)
+        {
+            return Math.Abs(number % 2) < double.Epsilon;
         }
     }
 }
