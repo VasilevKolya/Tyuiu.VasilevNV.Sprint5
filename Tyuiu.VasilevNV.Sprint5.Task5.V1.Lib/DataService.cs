@@ -7,31 +7,16 @@ namespace Tyuiu.VasilevNV.Sprint5.Task5.V1.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            string[] lines = File.ReadAllLines(path);
-            double sum = 0;
-
-            foreach (string line in lines)
+            double res = 0;
+            using (StreamReader reader = new StreamReader(path))
             {
-                if (string.IsNullOrWhiteSpace(line)) continue;
-
-
-                string normalizedLine = line.Replace(",", ".").Trim();
-
-                if (double.TryParse(normalizedLine, NumberStyles.Any, CultureInfo.InvariantCulture, out double number))
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    if (IsEven(number))
-                    {
-                        sum += number;
-                    }
+                    res = res + Convert.ToDouble(line);
                 }
             }
-
-            return Math.Round(sum, 3);
-        }
-
-        private bool IsEven(double number)
-        {
-            return Math.Abs(number % 2) < double.Epsilon;
+            return res;
         }
     }
 }

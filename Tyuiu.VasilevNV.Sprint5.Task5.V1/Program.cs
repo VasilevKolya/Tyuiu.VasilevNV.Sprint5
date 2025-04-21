@@ -11,8 +11,7 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("*УСЛОВИЕ:                                                               *");
 Console.WriteLine("*Найти сумму всех чисел с признаками деления на 2. Полученный результат   ");
 Console.WriteLine(" вывести на консоль. У вещественных значений округлить до трёх знаков после запятой. *");
-string tempPath = Path.GetTempPath();
-string path = Path.Combine(tempPath, "InPutDataFileTask5V1.txt");
+string path = @"C:\Users\nvasi\source\repos\Tyuiu.VasilevNV.Sprint5\Tyuiu.VasilevNV.Sprint5.Task5.V1\bin\Debug\net8.0\InPutDataFileTask5V1";
 Console.WriteLine("*************************************************************************");
 Console.WriteLine(" ИСХОДНЫЕ ДАННЫЕ:                                                       *");
 Console.WriteLine("*************************************************************************");
@@ -27,4 +26,4 @@ double res = ds.LoadFromDataFile(path);
 
 Console.WriteLine($"Сумма четных чисел = {res}");
 Console.ReadKey();
-     
+    
