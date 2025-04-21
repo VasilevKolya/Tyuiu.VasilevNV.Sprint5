@@ -7,16 +7,33 @@ namespace Tyuiu.VasilevNV.Sprint5.Task5.V1.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 0;
-            using (StreamReader reader = new StreamReader(path))
+            double sum = 0.0;
+
+            if (!File.Exists(path))
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                Console.WriteLine("Файл не найден!");
+                return 0.0;
+            }
+
+            string fileContent = File.ReadAllText(path);
+            string[] numberStrings = fileContent.Split(new[] { ',', ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string numStr in numberStrings)
+            {
+                if (double.TryParse(numStr, out double number))
                 {
-                    res = res + Convert.ToDouble(line);
+                    if (number % 2 == 0) 
+                    {
+                        sum += number;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"Ошибка парсинга: '{numStr}'");
                 }
             }
-            return res;
+
+            return sum;
         }
     }
 }
