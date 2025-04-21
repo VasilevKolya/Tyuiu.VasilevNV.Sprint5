@@ -26,4 +26,4 @@ double res = ds.LoadFromDataFile(path);
 
 Console.WriteLine($"Сумма четных чисел = {res}");
 Console.ReadKey();
-    
+     
