@@ -23,7 +23,7 @@ namespace Tyuiu.VasilevNV.Sprint5.Task6.V21.Lib
                     {
                         count++;
                     }
-                }
+                } 
 
                 return count;
             }
