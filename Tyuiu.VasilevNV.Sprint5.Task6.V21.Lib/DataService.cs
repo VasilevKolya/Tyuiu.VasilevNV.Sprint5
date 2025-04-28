@@ -14,10 +14,9 @@ namespace Tyuiu.VasilevNV.Sprint5.Task6.V21.Lib
                 if (content[i] == 'т' && content[i + 1] == 'т')
                 {
                     count++;
-                    i++;
+
                 }
             }
-
             return count;
         }
     }
