@@ -8,24 +8,24 @@ namespace Tyuiu.VasilevNV.Sprint5.Task6.V21.Lib
         public int LoadFromDataFile(string path)
         {
 
-            if (!File.Exists(path))
-            {
-                throw new FileNotFoundException("Файл не найден.", path);
-            }
 
-            string content = File.ReadAllText(path, Encoding.UTF8);  
-            int count = 0;
-
-            for (int i = 0; i < content.Length - 1; i++)
-            {
-
-                if (content[i] == 'т' && content[i + 1] == 'т')
+                if (!File.Exists(path))
                 {
-                    count++;
+                    throw new FileNotFoundException($"Файл не найден: {path}", path);
                 }
-            }
 
-            return count;
+                string content = File.ReadAllText(path, Encoding.UTF8);
+                int count = 0;
+
+                for (int i = 0; i < content.Length - 1; i++)
+                {
+                    if (content[i] == 'т' && content[i + 1] == 'т')
+                    {
+                        count++;
+                    }
+                }
+
+                return count;
+            }
         }
     }
-}
