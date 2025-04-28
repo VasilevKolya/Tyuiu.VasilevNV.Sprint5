@@ -1,5 +1,4 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint5;
-using System;
 using System.IO;
 namespace Tyuiu.VasilevNV.Sprint5.Task6.V21.Lib
 {
@@ -7,7 +6,6 @@ namespace Tyuiu.VasilevNV.Sprint5.Task6.V21.Lib
     {
         public int LoadFromDataFile(string path)
         {
-
             string content = File.ReadAllText(path);
             int count = 0;
 
@@ -16,7 +14,7 @@ namespace Tyuiu.VasilevNV.Sprint5.Task6.V21.Lib
                 if (content[i] == 'т' && content[i + 1] == 'т')
                 {
                     count++;
-                    i++; 
+                    i++;
                 }
             }
 
@@ -24,4 +22,3 @@ namespace Tyuiu.VasilevNV.Sprint5.Task6.V21.Lib
         }
     }
 }
-     
